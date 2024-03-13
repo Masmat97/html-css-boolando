@@ -33,7 +33,6 @@ main{
     margin-left: auto;
     margin-right: auto;
     flex-wrap: wrap;
-    
 }
 .foto-modelli{
     display: flex;
@@ -42,6 +41,28 @@ main{
     margin-left: 5rem;
     padding-top: 2rem;
 
+}
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    bottom: 40px;
+    background-color: red;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: white;
+    
+}
+.absolute-green{
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    background-color: green;
+    color: white;
+    margin-left: 0.5rem;
 }
 .modelli{
     height: 25rem;
