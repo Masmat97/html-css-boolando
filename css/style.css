@@ -6,7 +6,9 @@
 header{
     display: flex;
     justify-content:space-around;
-    
+    position: fixed;
+    left: 0;
+    right: 0;
     background-color: orange;
     color: white;
     padding: 1rem 0;
@@ -15,7 +17,9 @@ img{
     width: 9rem;
     height: 2rem;
 }
-    
+i{
+    padding-left: 2rem;
+} 
 .intestazione{
     display: flex;
     width: 33.3%;
