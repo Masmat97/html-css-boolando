@@ -1,30 +1,46 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
-header{
+
+:root {
+    --header-height: 3rem;
+    --main-width: 1000px;
+    --product-width: 200px;
+    --product-height: 25rem;
+    --red-color: red;
+    --green-color: green;
+    --white-color: white;
+    --black-color: black;
+    --orange-color: orange;
+}
+
+header {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-between;
     position: fixed;
     left: 0;
     right: 0;
-    background-color: orange;
-    color: white;
-    padding: 1rem 0;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--orange-color);
+    color: var(--white-color);
+    padding: 1rem;
+    z-index: 999;
 }
-img{
+
+img {
     width: 9rem;
     height: 2rem;
 }
-i{
-    padding-left: 2rem;
-} 
-.intestazione{
+
+.intestazione {
     display: flex;
-    width: 33.3%;
+    align-items: center;
 }
-main{
+
+main {
     display: flex;
     width: 1000px;
     flex-direction: row;
@@ -34,61 +50,85 @@ main{
     margin-right: auto;
     flex-wrap: wrap;
 }
-.foto-modelli{
+
+.foto-modelli {
     display: flex;
     width:200px;
     flex-direction: column;
     margin-left: 5rem;
     padding-top: 2rem;
-
 }
-.relative{
+
+.relative {
     position: relative;
 }
-.absolute{
+
+.modelli {
+    display: block;
+    height: 25rem;
+    width: 18rem;
+    transition: opacity 0.3s ease;
+}
+
+.modelli2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25rem;
+    width: 18rem;
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+}
+
+.relative:hover .modelli {
+    opacity: 0; 
+}
+
+.relative:hover .modelli2 {
+    opacity: 1; 
+}
+
+.absolute {
     position: absolute;
     bottom: 40px;
     background-color: red;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding: 0.5rem;
     color: white;
-    
 }
-.absolute-green{
+
+.absolute-green {
     position: absolute;
     bottom: 40px;
     left: 50px;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding: 0.5rem;
     background-color: green;
     color: white;
-    margin-left: 0.5rem;
 }
-.heart{
+
+.heart {
     position: absolute;
     top: 10px;
     left: 240px;
     background-color: white;
+    transition: color 0.3s ease; 
+}
 
-    
+.heart:hover {
+    color: var(--red-color); 
 }
-.modelli{
-    height: 25rem;
-    width: 18rem;
-}
-.red{
+
+.red {
     color: red;
 }
-.line-through{
+
+.line-through {
     text-decoration: line-through;
 }
-footer{
+
+footer {
     background-color: black;
     display: flex;
     justify-content: space-between;
-    padding-left: 100px;
+    padding: 1rem 100px;
     color: white;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    padding-right: 1rem;
 }
